@@ -10,8 +10,8 @@
                     <li><a href="index-2.html">Dashboard Dark</a></li> --}}
                     <li><a href="patient-list.html">Patient</a></li>
                     <li><a href="patient-details.html">Patient Details</a></li>
-                    <li><a href="doctor-list.html">Obat</a></li>
-                    <li><a href="doctor-detail.html">Obat Detail</a></li>
+                    <li><a href="doctor-list.html">Ruangan</a></li>
+                    {{-- <li><a href="doctor-detail.html">Obat Detail</a></li> --}}
                     {{-- <li><a href="page-review.html">Review</a></li> --}}
                 </ul>
             </li>
