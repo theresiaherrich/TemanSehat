@@ -6,8 +6,8 @@
                     <span class="nav-text">Dashboard</span>
                 </a>
                 <ul aria-expanded="false">
-                    {{-- <li><a href="index.html">Dashboard Light</a></li>
-                    <li><a href="index-2.html">Dashboard Dark</a></li> --}}
+                    <li><a href="/admin">Dashboard</a></li>
+                    {{-- <li><a href="index-2.html">Dashboard Dark</a></li> --}}
                     <li><a href="patient-list.html">Patient</a></li>
                     <li><a href="patient-details.html">Patient Details</a></li>
                     <li><a href="doctor-list.html">Ruangan</a></li>
@@ -15,7 +15,7 @@
                     {{-- <li><a href="page-review.html">Review</a></li> --}}
                 </ul>
             </li>
-            <li><a href="appointment.html" class="ai-icon" aria-expanded="false">
+            <li><a href="/dataappointment" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-menu"></i>
                     <span class="nav-text">Appointment</span>
                 </a>
