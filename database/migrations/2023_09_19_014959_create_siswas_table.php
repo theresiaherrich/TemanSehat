@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('penyaki');
             $table->string('jeniskelamin');
             $table->string('ruangan')->nullable();
-            $table->string('status')->nullable();
+            $table->string('status')->default('sembuh');
             $table->string('telp');
             $table->timestamps();
         });

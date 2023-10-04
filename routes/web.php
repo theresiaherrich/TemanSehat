@@ -21,6 +21,5 @@ Route::get('/admin', function () {
     return view('admin.home');
 });
 
-Route::get('/dataappointment', function () {
-    return view('admin.appointment.index');
-});
+Route::resource('/booking', \App\Http\Controllers\BookingController::class);
+

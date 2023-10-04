@@ -113,36 +113,34 @@
                                     </th>
                                     <th>Name</th>
                                     <th>Kelas</th>
+                                    <th>Penyakit/Kondisi</th>
                                     <th>Tanggal Janji</th>
                                     <th>Waktu</th>
                                     <th>No Telp</th>
-                                    <th>Penyakit/Kondisi</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @forelse ($book as $row)
                                 <tr>
-                                    <td>
-                                        <div class="checkbox text-end align-self-center">
-                                            <div class="form-check custom-checkbox ">
-                                                <input type="checkbox" class="form-check-input" id="customCheckBox1" required="">
-                                                <label class="form-check-label" for="customCheckBox1"></label>
-                                            </div>
-                                        </div>
-                                    </td>
+                                    <th scope="row">{{ $no++ }}</th>
                                     <td class="patient-info ps-0">
-                                        <span>
+                                        {{-- <span>
                                             <img src="{{ asset('eres/eres.dexignzone.com/laravel/demo/public/images/avatar/1.jpg') }}" alt="">
-                                        </span>
-                                        <span class="text-nowrap ms-2">Matthew</span>
+                                        </span> --}}
+                                        <span class="text-nowrap ms-2">{{ $row->nama }}</span>
                                     </td>
-                                    <td class="text-primary">gabriel@gmail.com</td>
-                                    <td>8 Aug 2021</td>
-                                    <td>13:00</td>
-                                    <td class="text-primary">9876512345</td>
-                                    <td>Dr. HANI B BARADI</td>
-                                    <td>Fever</td>
+                                    <td >{{ $row->kelas }}</td>
+                                    <td>{{ $row->penyakit }}</td>
+                                    <td>{{ $row->tanggal }}</td>
+                                    <td>{{ $row->pukul }}</td>
+                                    <td >{{ $row->telp }}</td>
+                                    <td>@if($row->status)
+                                        <span class="badge badge-soft-warning text-uppercase">Darurat</span>
+                                    @else
+                                        <span class="badge badge-soft-success text-uppercase">Ringan</span>
+                                    @endif</td>
                                     <td>
                                         <span class="me-3">
                                         <a href="javascript:void(0);" class="edit-appointment"><i class="fa fa-pencil fs-18 " aria-hidden="true"></i></a>
@@ -152,6 +150,7 @@
                                         </span>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -173,111 +172,72 @@
           </button>
         </div>
         <div class="modal-body">
-          <form>
-            <input type="hidden" name="_token" value="bPakjybVUgQcQWokzlwVoHKW0JCUTEtpM62AT4LX">          <div class="row">
+
+        <form action="{{ route('booking.store') }}" method="post"
+            enctype="multipart/form-data">
+            @csrf
+                <div class="col-xl-12">
+                    <div class="form-group">
+                        <label class="col-form-label">Nama:</label>
+                        <input type="text" class="form-control" id="nama"  name="nama" placeholder="Name">
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="form-group">
+                        <label class="col-form-label">Kelas:</label>
+                        <input type="text" class="form-control" id="kelas" name="kelas" placeholder="kelas">
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="form-group">
+                        <label  class="col-form-label">No Telp:</label>
+                        <input type="number" class="form-control" id="telp" name="telp" placeholder="Mobile">
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="form-group">
+                        <label  class="col-form-label">Keluhan:</label>
+                        <textarea class="form-control" id="penyakit" name="penyakit"></textarea>
+                    </div>
+                </div>
               <div class="col-xl-12">
                   <div class="form-group">
-                      <label  class="col-form-label">Title:</label>
-                      <select class="form-control">
-                        <option>Miss</option>
-                         <option>Mr.</option>
-                          <option>Mrs.</option>
+                      <label class="col-form-label">Tanggal Appointment:</label>
+                      <input size="16" type="date" name="tanggal" class="form-control">
+                  </div>
+              </div>
+              <div class="col-xl-12">
+                  <label class="form-label mt-3">Waktu<span class="text-danger">*</span></label>
+                  <div class="input-group clockpicker">
+                      <input type="time" class="form-control" name="pukul"><span class="input-group-text"><i
+                                  class="fas fa-clock"></i></span>
+                  </div>
+              </div>
+              <div class="col-xl-12">
+                  <div class="form-group">
+                      <label  class="col-form-label">Status:</label>
+                      <select class="form-control" name="status">
+                        <option>Darurat</option>
+                         <option>Ringan</option>
                       </select>
                    </div>
               </div>
-              <div class="col-xl-6">
-                  <div class="form-group">
-                      <label class="col-form-label">Name:</label>
-                       <input type="text" class="form-control" id="name1" placeholder="Name">
-                  </div>
-              </div>
-              <div class="col-xl-6">
-                  <div class="form-group">
-                      <label class="col-form-label">Last Name:</label>
-                       <input type="text" class="form-control" id="name2" placeholder="Last Name">
-                  </div>
-              </div>
-              <div class="col-xl-12">
-                  <div class="form-group">
-                      <label class="col-form-label">Date Of Appointment:</label>
-                      <input size="16" type="date"  class="form-control">
-                  </div>
-              </div>
-              <div class="col-xl-6">
-                  <label class="form-label mt-3">Form<span class="text-danger">*</span></label>
-                  <div class="input-group clockpicker">
-                      <input type="text" class="form-control" value="09:30"><span class="input-group-text"><i
-                                  class="fas fa-clock"></i></span>
-                  </div>
-              </div>
-              <div class="col-xl-6">
-                  <label class="form-label mt-3">To<span class="text-danger">*</span></label>
-                  <div class="input-group clockpicker">
-                      <input type="text" class="form-control" value="10:30"><span class="input-group-text"><i
-                                  class="fas fa-clock"></i></span>
-                  </div>
-              </div>
-              <div class="col-xl-12">
-                  <div class="form-group">
-                      <label  class="col-form-label">Address :</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                  </div>
-              </div>
-              <div class="col-xl-6">
-                  <div class="form-group">
-                      <label  class="col-form-label">Mobile No:</label>
-                       <input type="number" class="form-control" id="moblie1" placeholder="Mobile">
-                  </div>
-              </div>
-              <div class="col-xl-6">
-                  <div class="form-group">
-                      <label class="col-form-label">Email Id:</label>
-                       <input type="email" class="form-control" id="email1" placeholder="Email">
-                  </div>
-              </div>
-              <div class="col-xl-6">
-                  <div class="form-group">
-                      <label class="col-form-label">Consulting Doctor:</label>
-                      <select class="form-control">
-                        <option>Dr.HANI B BARADI</option>
-                         <option>Dr.NAJJIA N MAHMOUD</option>
-                          <option>Dr. SANKAR NAIDU ADUSUMILLI</option>
-                      </select>
-                  </div>
-              </div>
-              <div class="col-xl-6">
-                  <div class="form-group">
-                      <label  class="col-form-label">Injury/Condition:</label>
-                       <input type="text" class="form-control" id="fever" placeholder="fever">
-                  </div>
-              </div>
-              <div class="col-xl-12">
-                  <div class="form-group">
-                      <label  class="col-form-label">Note:</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
-                  </div>
-              </div>
-          </div>
+            </div>
 
 
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send message</button>
-        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Kirim</button>
+            </div>
+        </form>
+    </div>
       </div>
     </div>
   </div>
         <!--**********************************
             Footer start
         ***********************************-->
-        <div class="footer">
-
-      <div class="copyright">
-          <p>Copyright © Designed &amp; Developed by <a href="https://dexignzone.com/" target="_blank">DexignZone</a> 2023</p>
-      </div>
-  </div>        <!--**********************************
+          <!--**********************************
             Footer end
         ***********************************-->
 

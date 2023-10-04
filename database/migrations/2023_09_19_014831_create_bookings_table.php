@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('penyakit');
             $table->string('tanggal');
             $table->string('pukul');
-            $table->string('status')->nullable();
+            $table->string('status')->default('ringan');
             $table->timestamps();
         });
     }

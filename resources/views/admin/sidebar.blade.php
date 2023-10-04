@@ -15,7 +15,7 @@
                     {{-- <li><a href="page-review.html">Review</a></li> --}}
                 </ul>
             </li>
-            <li><a href="/dataappointment" class="ai-icon" aria-expanded="false">
+            <li><a href="/booking" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-menu"></i>
                     <span class="nav-text">Appointment</span>
                 </a>
