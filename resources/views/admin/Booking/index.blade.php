@@ -124,7 +124,15 @@
                             <tbody>
                                 @forelse ($book as $row)
                                 <tr>
-                                    <th scope="row">{{ $no++ }}</th>
+                                    {{-- <th scope="row">{{ $no++ }}</th> --}}
+                                    <td>
+                                        <div class="checkbox text-end align-self-center">
+                                            <div class="form-check custom-checkbox ">
+                                                <input type="checkbox" class="form-check-input" id="customCheckBox1" required="">
+                                                <label class="form-check-label" for="customCheckBox1"></label>
+                                            </div>
+                                        </div>
+                                    </td>
                                     <td class="patient-info ps-0">
                                         {{-- <span>
                                             <img src="{{ asset('eres/eres.dexignzone.com/laravel/demo/public/images/avatar/1.jpg') }}" alt="">
@@ -143,7 +151,7 @@
                                     @endif</td>
                                     <td>
                                         <span class="me-3">
-                                        <a href="javascript:void(0);" class="edit-appointment"><i class="fa fa-pencil fs-18 " aria-hidden="true"></i></a>
+                                        <a href="javascript:void(0);" class="edit-appointment" id="edit" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-kelas="{{ $row->kelas}}" data-nama="{{ $row->nama}}" data-tanggal="{{ $row->tanggal}}" data-telp=" {{ $row->telp}} " data-penyakit="{{ $row->penyakit}}" data-pukul="{{ $row->pukul}}"><i class="fa fa-pencil fs-18 "  aria-hidden="true" ></i></a>
                                         </span>
                                         <span>
                                             <i class="fa fa-trash fs-18 text-danger" aria-hidden="true"></i>
@@ -234,6 +242,81 @@
       </div>
     </div>
   </div>
+
+
+
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Appointment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          </button>
+        </div>
+        <div class="modal-body">
+
+        <form   method="post"
+            enctype="multipart/form-data">
+            @csrf
+            
+                <div class="col-xl-12">
+                    <div class="form-group">
+                        <label class="col-form-label">Nama:</label>
+                        <input type="text" class="form-control"   id="namaedit"  placeholder="id">
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="form-group">
+                        <label class="col-form-label">Kelas:</label>
+                        <input type="text" class="form-control"id="kelasedit" placeholder="kelas">
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="form-group">
+                        <label  class="col-form-label">No Telp:</label>
+                        <input type="number" class="form-control"  id="telpedit" placeholder="Mobile">
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="form-group">
+                        <label  class="col-form-label">Keluhan:</label>
+                        <textarea class="form-control"  id="penyakitedit"></textarea>
+                    </div>
+                </div>
+              <div class="col-xl-12">
+                  <div class="form-group">
+                      <label class="col-form-label">Tanggal Appointment:</label>
+                      <input size="16" type="date" id="tanggaledit" class="form-control">
+                  </div>
+              </div>
+              <div class="col-xl-12">
+                  <label class="form-label mt-3">Waktu<span class="text-danger">*</span></label>
+                  <div class="input-group clockpicker">
+                      <input type="time" class="form-control" id="pukuledit"><span class="input-group-text"><i
+                                  class="fas fa-clock"></i></span>
+                  </div>
+              </div>
+              <div class="col-xl-12">
+                  <div class="form-group">
+                      <label  class="col-form-label">Status:</label>
+                      <select class="form-control" id="status">
+                        <option>Darurat</option>
+                         <option>Ringan</option>
+                      </select>
+                   </div>
+              </div>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Kirim</button>
+            </div>
+        </form>
+    </div>
+      </div>
+    </div>
+  </div>
         <!--**********************************
             Footer start
         ***********************************-->
@@ -273,13 +356,13 @@
                     <script src="{{ asset('eres/eres.dexignzone.com/laravel/demo/public/js/deznav-init.js') }}" type="text/javascript"></script>
                     <script src="{{ asset('eres/eres.dexignzone.com/laravel/demo/public/js/demo.js') }}" type="text/javascript"></script>
                     <script src="{{ asset('eres/eres.dexignzone.com/laravel/demo/public/js/styleSwitcher.js') }}" type="text/javascript"></script>
-
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
     (function($) {
 
         var table = $('#example5').DataTable({
             searching: false,
-            paging:true,
+            paging:false,
             select: false,
             //info: false,
             lengthChange:false
@@ -298,6 +381,28 @@
     });
 </script>
 
+<script>
+
+    $('#edit').on('click',function () {
+
+        var nama = $(this).data("nama");
+        var kelas = $(this).data("kelas");
+        var penyakit = $(this).data("penyakit");
+        var tanggal = $(this).data("tanggal");
+        var telp = $(this).data("telp");
+        var pukul = $(this).data('pukul');
+
+console.log(pukul)
+
+        $('#namaedit').val(nama);
+        $('#tanggaledit').val(tanggal);
+        $('#telpedit').val(telp);
+        $('#kelasedit').val(kelas);
+        $('#penyakitedit').val(penyakit);
+        $('#pukuledit').val(pukul);
+
+    })
+</script>
 
 
 </body>
