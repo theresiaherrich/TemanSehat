@@ -3,7 +3,7 @@
 	   <div class="iq-sidebar-logo">
 		  <div class="top-logo">
 			 <a href="index.html" class="logo">
-			 <img src="images/logo.png" class="img-fluid" alt="">
+			 <img src="{{asset('xrayy/templates.iqonic.design/images/logo.png') }}" class="img-fluid" alt="">
 			 <span>Healthy</span>
 			 </a>
 		  </div>
@@ -42,7 +42,7 @@
 							<a href="#" class="iq-sub-card" >
 							   <div class="media align-items-center">
 								  <div class="">
-									 <img class="avatar-40 rounded" src="images/user/01.jpg" alt="">
+									 <img class="avatar-40 rounded" src="{{asset('xrayy/templates.iqonic.design/images/user/01.jpg') }}" alt="">
 								  </div>
 								  <div class="media-body ml-3">
 									 <h6 class="mb-0 ">Emma Watson Bini</h6>
@@ -54,7 +54,7 @@
 							<a href="#" class="iq-sub-card" >
 							   <div class="media align-items-center">
 								  <div class="">
-									 <img class="avatar-40 rounded" src="images/user/02.jpg" alt="">
+									 <img class="avatar-40 rounded" src="{{asset('xrayy/templates.iqonic.design/images/user/02.jpg') }}" alt="">
 								  </div>
 								  <div class="media-body ml-3">
 									 <h6 class="mb-0 ">New customer is join</h6>
@@ -66,7 +66,7 @@
 							<a href="#" class="iq-sub-card" >
 							   <div class="media align-items-center">
 								  <div class="">
-									 <img class="avatar-40 rounded" src="images/user/03.jpg" alt="">
+									 <img class="avatar-40 rounded" src="{{asset('xrayy/templates.iqonic.design/images/user/03.jpg') }}" alt="">
 								  </div>
 								  <div class="media-body ml-3">
 									 <h6 class="mb-0 ">Two customer is left</h6>
@@ -78,7 +78,7 @@
 							<a href="#" class="iq-sub-card" >
 							   <div class="media align-items-center">
 								  <div class="">
-									 <img class="avatar-40 rounded" src="images/user/04.jpg" alt="">
+									 <img class="avatar-40 rounded" src="{{asset('xrayy/templates.iqonic.design/images/user/04.jpg') }}" alt="">
 								  </div>
 								  <div class="media-body ml-3">
 									 <h6 class="mb-0 ">New Mail from Fenny</h6>
@@ -105,7 +105,7 @@
 							<a href="#" class="iq-sub-card" >
 							   <div class="media align-items-center">
 								  <div class="">
-									 <img class="avatar-40 rounded" src="images/user/01.jpg" alt="">
+									 <img class="avatar-40 rounded" src="{{asset('xrayy/templates.iqonic.design/images/user/01.jpg') }}" alt="">
 								  </div>
 								  <div class="media-body ml-3">
 									 <h6 class="mb-0 ">Bini Emma Watson</h6>
@@ -116,7 +116,7 @@
 							<a href="#" class="iq-sub-card" >
 							   <div class="media align-items-center">
 								  <div class="">
-									 <img class="avatar-40 rounded" src="images/user/02.jpg" alt="">
+									 <img class="avatar-40 rounded" src="{{asset('xrayy/templates.iqonic.design/images/user/02.jpg') }}" alt="">
 								  </div>
 								  <div class="media-body ml-3">
 									 <h6 class="mb-0 ">Lorem Ipsum Watson</h6>
@@ -127,7 +127,7 @@
 							<a href="#" class="iq-sub-card" >
 							   <div class="media align-items-center">
 								  <div class="">
-									 <img class="avatar-40 rounded" src="images/user/03.jpg" alt="">
+									 <img class="avatar-40 rounded" src="{{asset('xrayy/templates.iqonic.design/images/user/03.jpg') }}" alt="">
 								  </div>
 								  <div class="media-body ml-3">
 									 <h6 class="mb-0 ">Why do we use it?</h6>
@@ -138,7 +138,7 @@
 							<a href="#" class="iq-sub-card" >
 							   <div class="media align-items-center">
 								  <div class="">
-									 <img class="avatar-40 rounded" src="images/user/04.jpg" alt="">
+									 <img class="avatar-40 rounded" src="{{asset('xrayy/templates.iqonic.design/images/user/04.jpg') }}" alt="">
 								  </div>
 								  <div class="media-body ml-3">
 									 <h6 class="mb-0 ">Variations Passages</h6>
@@ -149,7 +149,7 @@
 							<a href="#" class="iq-sub-card" >
 							   <div class="media align-items-center">
 								  <div class="">
-									 <img class="avatar-40 rounded" src="images/user/05.jpg" alt="">
+									 <img class="avatar-40 rounded" src="{{asset('xrayy/templates.iqonic.design/images/user/05.jpg') }}" alt="">
 								  </div>
 								  <div class="media-body ml-3">
 									 <h6 class="mb-0 ">Lorem Ipsum generators</h6>
