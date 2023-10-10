@@ -1,164 +1,48 @@
-<div class="deznav">
-    <div class="deznav-scroll">
-        <ul class="metismenu" id="menu">
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-networking"></i>
-                    <span class="nav-text">Dashboard</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="/admin">Dashboard</a></li>
-                    {{-- <li><a href="index-2.html">Dashboard Dark</a></li> --}}
-                    <li><a href="patient-list.html">Patient</a></li>
-                    <li><a href="patient-details.html">Patient Details</a></li>
-                    <li><a href="doctor-list.html">Ruangan</a></li>
-                    {{-- <li><a href="doctor-detail.html">Obat Detail</a></li> --}}
-                    {{-- <li><a href="page-review.html">Review</a></li> --}}
-                </ul>
-            </li>
-            <li><a href="/booking" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-381-menu"></i>
-                    <span class="nav-text">Appointment</span>
-                </a>
-            </li>
-            <li><a href="javascript:void(0);" class="ai-icon has-arrow" aria-expanded="false">
-                    <i class="flaticon-381-id-card-4"></i>
-                    <span class="nav-text">Staff</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="staff.html">Staff</a></li>
-                    <li><a href="staff-profile.html">Staff Profie</a></li>
-                </ul>
-            </li>
-            {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                <i class="flaticon-381-television"></i>
-                    <span class="nav-text">Apps</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="app-profile.html">Profile</a></li>
-                    <li><a href="post-details.html">Post Details</a></li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
-                        <ul aria-expanded="false">
-                            <li><a href="email-compose.html">Compose</a></li>
-                            <li><a href="email-inbox.html">Inbox</a></li>
-                            <li><a href="email-read.html">Read</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="app-calender.html">Calendar</a></li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Shop</a>
-                        <ul aria-expanded="false">
-                            <li><a href="ecom-product-grid.html">Product Grid</a></li>
-                            <li><a href="ecom-product-list.html">Product List</a></li>
-                            <li><a href="ecom-product-detail.html">Product Details</a></li>
-                            <li><a href="ecom-product-order.html">Order</a></li>
-                            <li><a href="ecom-checkout.html">Checkout</a></li>
-                            <li><a href="ecom-invoice.html">Invoice</a></li>
-                            <li><a href="ecom-customers.html">Customers</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-controls-3"></i>
-                    <span class="nav-text">Charts</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="chart-flot.html">Flot</a></li>
-                    <li><a href="chart-morris.html">Morris</a></li>
-                    <li><a href="chart-chartjs.html">Chartjs</a></li>
-                    <li><a href="chart-chartist.html">Chartist</a></li>
-                    <li><a href="chart-sparkline.html">Sparkline</a></li>
-                    <li><a href="chart-peity.html">Peity</a></li>
-                </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-internet"></i>
-                    <span class="nav-text">Bootstrap</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="ui-accordion.html">Accordion</a></li>
-                    <li><a href="ui-alert.html">Alert</a></li>
-                    <li><a href="ui-badge.html">Badge</a></li>
-                    <li><a href="ui-button.html">Button</a></li>
-                    <li><a href="ui-modal.html">Modal</a></li>
-                    <li><a href="ui-button-group.html">Button Group</a></li>
-                    <li><a href="ui-list-group.html">List Group</a></li>
-                    <li><a href="ui-media-object.html">Media Object</a></li>
-                    <li><a href="ui-card.html">Cards</a></li>
-                    <li><a href="ui-carousel.html">Carousel</a></li>
-                    <li><a href="ui-dropdown.html">Dropdown</a></li>
-                    <li><a href="ui-popover.html">Popover</a></li>
-                    <li><a href="ui-progressbar.html">Progressbar</a></li>
-                    <li><a href="ui-tab.html">Tab</a></li>
-                    <li><a href="ui-typography.html">Typography</a></li>
-                    <li><a href="ui-pagination.html">Pagination</a></li>
-                    <li><a href="ui-grid.html">Grid</a></li>
-
-                </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-heart"></i>
-                    <span class="nav-text">Plugins</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="uc-select2.html">Select 2</a></li>
-                    <li><a href="uc-nestable.html">Nestedable</a></li>
-                    <li><a href="uc-noui-slider.html">Noui Slider</a></li>
-                    <li><a href="uc-sweetalert.html">Sweet Alert</a></li>
-                    <li><a href="uc-toastr.html">Toastr</a></li>
-                    <li><a href="map-jqvmap.html">Jqv Map</a></li>
-                    <li><a href="uc-lightgallery.html">Light Gallery</a></li>
-                </ul>
-            </li>
-            <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-381-settings-2"></i>
-                    <span class="nav-text">Widget</span>
-                </a>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-notepad"></i>
-                    <span class="nav-text">Forms</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="form-element.html">Form Elements</a></li>
-                    <li><a href="form-wizard.html">Wizard</a></li>
-                   <li><a href="form-ckeditor.html">CkEditor</a></li>
-                    <li><a href="form-pickers.html">Pickers</a></li>
-                    <li><a href="form-validation-jquery.html">Jquery Validate</a></li>
-                </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-network"></i>
-                    <span class="nav-text">Table</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
-                    <li><a href="table-datatable-basic.html">Datatable</a></li>
-                </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-381-layer-1"></i>
-                    <span class="nav-text">Pages</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="page-register.html">Register</a></li>
-                    <li><a href="page-login.html">Login</a></li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
-                        <ul aria-expanded="false">
-                            <li><a href="page-error-400.html">Error 400</a></li>
-                            <li><a href="page-error-403.html">Error 403</a></li>
-                            <li><a href="page-error-404.html">Error 404</a></li>
-                            <li><a href="page-error-500.html">Error 500</a></li>
-                            <li><a href="page-error-503.html">Error 503</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="page-lock-screen.html">Lock Screen</a></li>
-                </ul>
-            </li> --}}
-        </ul>
-
-        <div class="plus-box">
-            <p class="fs-16 font-w500 mb-1">Check your job schedule</p>
-            <a class="text-white fs-26" href="javascript:;"><i class="las la-long-arrow-alt-right"></i></a>
-        </div>
+<div class="iq-sidebar">
+    <div class="iq-sidebar-logo d-flex justify-content-between">
+       <a href="index.html">
+       <img src="images/logo.png" class="img-fluid" alt="">
+       <span>Healthy</span>
+       </a>
+       <div class="iq-menu-bt-sidebar">
+             <div class="iq-menu-bt align-self-center">
+                <div class="wrapper-menu">
+                   <div class="main-circle"><i class="ri-more-fill"></i></div>
+                   <div class="hover-circle"><i class="ri-more-2-fill"></i></div>
+                </div>
+             </div>
+          </div>
     </div>
-</div>
+    <div id="sidebar-scrollbar">
+       <nav class="iq-sidebar-menu">
+          <ul id="iq-sidebar-toggle" class="iq-menu">
+             <li class="iq-menu-title"><i class="ri-subtract-line"></i><span>Dashboard</span></li>
+             <li>
+                <a href="index.html" class="iq-waves-effect"><i class="ri-hospital-fill"></i><span>Doctor Dashboard</span></a>
+             </li>                     
+             <li class="iq-menu-title"><i class="ri-subtract-line"></i><span>Pages</span></li>
+             <li>
+                <a href="#mailbox" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-mail-open-fill"></i><span>Email</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                <ul id="mailbox" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                   <li><a href="app/index.html"><i class="ri-inbox-fill"></i>Inbox</a></li>
+                   <li><a href="app/email-compose.html"><i class="ri-edit-2-fill"></i>Email Compose</a></li>
+                </ul>
+             </li>
+             
+             <li>
+                <a href="#doctor-info" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-user-3-fill"></i><span>Doctors</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                <ul id="doctor-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                   <li><a href="doctor-list.html"><i class="ri-file-list-fill"></i>All Doctors</a></li>
+                   <li><a href="add-doctor.html"><i class="ri-user-add-fill"></i> Add Doctor</a></li>
+                   <li><a href="profile.html"><i class="ri-profile-fill"></i>Doctor Profile</a></li>
+                   <li><a href="profile-edit.html"><i class="ri-file-edit-fill"></i> Edit Doctor</a></li>
+                </ul>
+             </li>
+             <li><a href="calendar.html" class="iq-waves-effect"><i class="ri-calendar-event-fill"></i><span>Calendar</span></a></li>
+            
+            <li><a href="chat.html" class="iq-waves-effect"><i class="ri-message-fill"></i><span>Chat</span></a></li>
+          </ul>
+       </nav>
+       <div class="p-3"></div>
+    </div>
+ </div>
