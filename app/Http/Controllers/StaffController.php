@@ -57,6 +57,7 @@ class StaffController extends Controller
      */
     public function create(): View
     {
+
         return view('admin.Staff.create');
     }
 
@@ -93,7 +94,7 @@ class StaffController extends Controller
         ]);
 
         //redirect to index
-        return redirect()->route('Staff.index')->with(['success' => 'Data Berhasil Disimpan!']);
+        return redirect()->route('datastaff.index')->with(['success' => 'Data Berhasil Disimpan!']);
     }
     /**
      * show
@@ -180,7 +181,7 @@ class StaffController extends Controller
         }
 
         //redirect to index
-        return redirect()->route('Staff.index')->with(['success' => 'Data Berhasil Diubah!']);
+        return redirect()->route('datastaff.index')->with(['success' => 'Data Berhasil Diubah!']);
     }
 
 /**
@@ -201,6 +202,6 @@ class StaffController extends Controller
         $sat->delete();
 
         //redirect to index
-        return redirect()->route('Staff.index')->with(['success' => 'Data Berhasil Dihapus!']);
+        return redirect()->route('datastaff.index')->with(['success' => 'Data Berhasil Dihapus!']);
     }
 }
