@@ -7,14 +7,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 <title>Teman Sehat - Health &amp; Medical HTML Template</title>
 
-<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/favicon.png') }}">
 
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/bootstrap.min.css') }}">
 
-<link rel="stylesheet" href="assets/css/fontawesome/css/fontawesome.min.css">
-<link rel="stylesheet" href="assets/css/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/fontawesome/css/fontawesome.min.css') }]">
+<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/fontawesome/css/all.min.css') }}">
 
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/style.css') }}">
 
 <!--[if lt IE 9]>
 		<script src="assets/js/html5shiv.min.js"></script>
@@ -29,7 +29,7 @@
 <div class="row">
 <div class="col-md-2 float-left">
 <div class="logo">
-<a title="Teman Sehat" href="index.html"><img alt="Logo" src="assets/img/logo.png" width="308" height="61"></a>
+<a title="Teman Sehat" href="index.html"><img alt="Logo" src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/logo.png') }}" width="308" height="61"></a>
 </div>
 </div>
 <div class="col-md-10">
@@ -74,7 +74,7 @@
 <a class="toggle-menu" href="#side_menu"><i class="fas fa-bars"></i></a>
 </div>
 <div class="page_title">
-<a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="img-fluid" width="60" height="60"></a>
+<a href="index.html"><img src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/logo.png') }}" alt="Logo" class="img-fluid" width="60" height="60"></a>
 </div>
 </header>
 
@@ -90,10 +90,11 @@
 </li>
 <li>
 <div class="mobile-menu-item clearfix">
-<a href="about-us.html">Tentang Kami Us</a>
+<a href="about-us.html">About Us</a>
 </div>
 </li>
 <li>
+</li>
 <li class="active">
 <div class="mobile-menu-item clearfix">
 <a href="doctors.html">Konsultan</a>
@@ -151,7 +152,7 @@
 <div class="col-12 col-md-6 col-lg-4 col-xl-4">
 <div class="doctor-list">
 <div class="doctor-inner">
-<img class="img-fluid" alt src="assets/img/Butania.png">
+<img class="img-fluid" alt src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/Butania.png') }}">
 <div class="doctor-details">
 <div class="doctor-info">
 <h4 class="doctor-name"><a href="doctor-details.html">Bu. Tania Sandoval MBBS, FRCS</a></h4>
@@ -183,7 +184,7 @@
 <div class="col-12 col-md-6 col-lg-4 col-xl-4">
 <div class="doctor-list">
 <div class="doctor-inner">
-<img class="img-fluid" alt src="assets/img/doctor-03.jpg">
+<img class="img-fluid" alt src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/doctor-03.jpg">
 <div class="doctor-details">
 <div class="doctor-info">
 <h4 class="doctor-name">
@@ -215,7 +216,7 @@
 <div class="col-12 col-md-6 col-lg-4 col-xl-4">
 <div class="doctor-list">
 <div class="doctor-inner">
-<img class="img-fluid" alt src="assets/img/doctor-08.jpg">
+<img class="img-fluid" alt src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/doctor-08.jpg">
 <div class="doctor-details">
 <div class="doctor-info">
 <h4 class="doctor-name"><a href="doctor-details.html">Dr. Theresia  MBBS, FDS</a></h4>
@@ -247,7 +248,7 @@
 <div class="col-12 col-md-6 col-lg-4 col-xl-4">
 <div class="doctor-list">
 <div class="doctor-inner">
-<img class="img-fluid" alt src="assets/img/doctor-02.jpg">
+<img class="img-fluid" alt src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/doctor-02.jpg">
 <div class="doctor-details">
 <div class="doctor-info">
 <h4 class="doctor-name"><a href="doctor-details.html">Dr. Berinda  MBBS, FDS</a></h4>
@@ -279,7 +280,7 @@
 <div class="col-12 col-md-6 col-lg-4 col-xl-4">
 <div class="doctor-list">
 <div class="doctor-inner">
-<img class="img-fluid" alt src="assets/img/doctor-05.jpg">
+<img class="img-fluid" alt src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/doctor-05.jpg">
 <div class="doctor-details">
 <div class="doctor-info">
 <h4 class="doctor-name">
@@ -313,7 +314,7 @@
 <div class="col-12 col-md-6 col-lg-4 col-xl-4">
 <div class="doctor-list">
 <div class="doctor-inner">
-<img class="img-fluid" alt src="assets/img/doctor-04.jpg">
+<img class="img-fluid" alt src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/doctor-04.jpg">
 <div class="doctor-details">
 <div class="doctor-info">
 <h4 class="doctor-name">
@@ -440,12 +441,12 @@
 
 <div class="sidebar-overlay" data-reff="#side_menu"></div>
 
-<script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/js/jquery-3.5.1.min.js"></script>
 
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/js/popper.min.js"></script>
+<script src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/js/bootstrap.min.js"></script>
 
-<script src="assets/js/theme.js"></script>
+<script src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/js/theme.js"></script>
 </body>
 
 <!-- Mirrored from Teman Sehat.dreamguystech.com/lightblue/doctors.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2023 06:09:16 GMT -->

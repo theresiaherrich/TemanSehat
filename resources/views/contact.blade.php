@@ -7,14 +7,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 <title>Teman Sehat - Health &amp; Medical HTML Template</title>
 
-<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/favicon.png') }}">
 
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/bootstrap.min.css') }}">
 
-<link rel="stylesheet" href="assets/css/fontawesome/css/fontawesome.min.css">
-<link rel="stylesheet" href="assets/css/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/fontawesome/css/fontawesome.min.css') }}">
+<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/fontawesome/css/all.min.css') }}">
 
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/style.css') }}">
 
 <!--[if lt IE 9]>
 		<script src="assets/js/html5shiv.min.js"></script>
@@ -30,7 +30,7 @@
 <div class="col-md-2 float-left">
 <div class="logo">
 <a title="Teman Sehat" href="index.html">
-<img alt="Logo" src="assets/img/logo.png" width="308" height="61">
+<img alt="Logo" src="a{{asset('medilabf/medifab.dreamguystech.com/lightblue/ssets/img/logo.png') }}" width="308" height="61">
 </a>
 </div>
 </div>
@@ -43,6 +43,10 @@
 </li>
 <li class="nav-item">
 <a href="about-us.html" class="nav-link">Tentang Kami</a>
+</li>
+
+<li class="nav-item">
+<a href="services.html" class="nav-link">Services</a>
 </li>
 <li class="nav-item">
 <a href="doctors.html" class="nav-link">Konsultan</a>
@@ -75,7 +79,7 @@
 <a class="toggle-menu" href="#side_menu"><i class="fas fa-bars"></i></a>
 </div>
 <div class="page_title">
-<a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="img-fluid" width="60" height="60"></a>
+<a href="index.html"><img src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/logo.png') }}" alt="Logo" class="img-fluid" width="60" height="60"></a>
 </div>
 </header>
 
@@ -94,6 +98,11 @@
 <a href="about-us.html">Tentang Kami</a>
 </div>
 </li>
+
+<li>
+<div class="mobile-menu-item clearfix">
+<a href="services.html">Services</a>
+</div>
 </li>
 <li>
 <div class="mobile-menu-item clearfix">
@@ -286,10 +295,10 @@
 
 <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.5.1.min.js"></script>
 
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/js/popper.min.js') }}"></script>
+<script src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/js/bootstrap.min.js') }}"></script>
 
-<script src="assets/js/theme.js"></script>
+<script src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/js/theme.js') }}"></script>
 </body>
 
 <!-- Mirrored from Teman Sehat.dreamguystech.com/lightblue/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2023 06:09:26 GMT -->

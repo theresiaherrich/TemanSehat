@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from Teman Sehat.dreamguystech.com/lightblue/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2023 06:09:26 GMT -->
+<!-- Mirrored from Teman sehat.dreamguystech.com/lightblue/about-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2023 06:09:07 GMT -->
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-<title>Teman Sehat - Health &amp; Medical HTML Template</title>
-
-<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-<link rel="stylesheet" href="assets/css/fontawesome/css/fontawesome.min.css">
-<link rel="stylesheet" href="assets/css/fontawesome/css/all.min.css">
-
-<link rel="stylesheet" href="assets/css/style.css">
-
-<!--[if lt IE 9]>
-		<script src="assets/js/html5shiv.min.js"></script>
-		<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
-</head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>Teman Sehat</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/favicon.png') }}">
+	
+	<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/bootstrap.min.css') }}">
+	
+	<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/fontawesome/css/fontawesome.min.css') }}">
+	<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/fontawesome/css/all.min.css') }}">
+	
+	<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/owl.carousel.css') }}">
+	<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/owl.theme.default.min.css') }}">
+	
+	<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/style.css') }}">
+	
+	<!--[if lt IE 9]>
+			<script src="assets/js/html5shiv.min.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+			<![endif]-->
+	</head>
 <body>
 
 <header class="header">
 <div class="header-top">
 <div class="container">
-<div class="row">
+<div class="row no-gutters">
 <div class="col-md-2 float-left">
 <div class="logo">
-<a title="Teman Sehat" href="index.html">
-<img alt="Logo" src="assets/img/logo.png" width="308" height="61">
+<a title="Teman sehat" href="index.html">
+<img alt="Logo" src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/logo.png') }}" width="308" height="61">
 </a>
 </div>
 </div>
@@ -41,13 +44,13 @@
 <li class="nav-item">
 <a href="index.html" class="nav-link">Home</a>
 </li>
-<li class="nav-item">
+<li class="active nav-item">
 <a href="about-us.html" class="nav-link">Tentang Kami</a>
 </li>
 <li class="nav-item">
 <a href="doctors.html" class="nav-link">Konsultan</a>
 </li>
-<li class="active nav-item">
+<li class="nav-item">
 <a href="contact-us.html" class="nav-link">Kontak Kami</a>
 </li>
 <li class="nav-item">
@@ -75,7 +78,7 @@
 <a class="toggle-menu" href="#side_menu"><i class="fas fa-bars"></i></a>
 </div>
 <div class="page_title">
-<a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="img-fluid" width="60" height="60"></a>
+<a href="index.html"><img src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/logo.png') }}" alt="Logo" class="img-fluid" width="60" height="60"></a>
 </div>
 </header>
 
@@ -89,20 +92,19 @@
 <a href="index.html">Home</a>
 </div>
 </li>
-<li>
+<li class="active">
 <div class="mobile-menu-item clearfix">
-<a href="about-us.html">Tentang Kami</a>
+<a href="about-us.html"> Tentang Kami</a>
 </div>
 </li>
-</li>
+<li>
 <li>
 <div class="mobile-menu-item clearfix">
 <a href="doctors.html">Konsultan</a>
 </div>
 </li>
-</ul>
-</li>
-<li class="active">
+<li>
+<li>
 <div class="mobile-menu-item clearfix">
 <a href="contact-us.html">Kontak Kami</a>
 </div>
@@ -122,16 +124,6 @@
 <a href="register.html">Register</a>
 </div>
 </li>
-<li>
-<div class="mobile-menu-item clearfix">
-<a href="forgot-password.html">Forgot Password</a>
-</div>
-</li>
-<li>
-<div class="mobile-menu-item clearfix">
-<a href="404.html">404</a>
-</div>
-</li>
 </ul>
 </div>
 </div>
@@ -143,63 +135,60 @@
 <div class="container">
 <div class="row">
 <div class="col-12">
-<div class="page-title">
-<span>Kontak Kami dan Temui</span>
+<div class="page-title"> <span>Tentang Kami</span>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="content">
+
+<section class="content">
 <div class="container">
 <div class="row">
-<aside class="col-md-4">
-<div class="contact-left">
-<div class="contact-address">
-<h3 class="company-name">Teman Sehat </h3>
-<p>Kota Malang,
-<br>Jl. Teluk Pacitan, Arjosari, Kec. Blimbing,
-<br>Jawa Timur 65126</p>
-<p class="m-b-0"><strong>Phone</strong>:
-<a href="tel:+8503867896">850-386-7896</a>,
-<br> <strong>Fax</strong>: <a href="tel:+8503867896">850-386-7896</a>
-<br> <strong>Email</strong>: <a href="https://Teman Sehat.dreamguystech.com/cdn-cgi/l/email-protection#c0ada5a4a9a6a1a280a5b8a1adb0aca5eea3afad"><span class="__cf_email__" data-cfemail="365b53525f50575476534e575b465a531855595b">[email&#160;protected]</span></a>
-</p>
-</div>
-<div class="working-hours">
-<h3>Jam Kerja</h3>
-<ul>
-<li>
-<span>Senin</span> <b>9.00 AM To 3.00 PM</b>
-</li>
-<li>
-<span>Selasa</span> <b>9.00 AM To 3.00 PM</b>
-</li>
-<li>
-<span>Rabu</span> <b>9.00 AM To 3.00 PM</b>
-</li>
-<li>
-<span>Kamis</span> <b>9.00 AM To 3.00 PM</b>
-</li>
-<li>
-<span>Jum`at</span> <b>9.00 AM To 1.00 PM</b>
-</li>
-<li>
-<span>Sabtu</span> <b>Tutup</b>
-</li>
-<li>
-<span>Minggu</span> <b>Tutup</b>
-</li>
-</ul>
+<div class="col-12">
+<div class="section-header text-center">
+<h3 class="header-title">Teman sehat</h3>
+<div class="line"></div>
 </div>
 </div>
-</aside>
-<div class="col-md-8 map-frame">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.606847207636!2d112.65906417500653!3d-7.936064392087929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6299ed2c476ad%3A0xfba1cc2ab944bab!2sSMK%20Negeri%208%20Kota%20Malang!5e0!3m2!1sid!2sid!4v1697504989905!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<div class="row">
+<div class="col-md-12 about-desc">
+	<p>Usaha Kesehatan Sekolah (UKS) adalah upaya untuuk membina dan mengembangkan kebiasaan hidup sehat yang dilakukan secara terpadu 
+		melalui program pendidikan dan pelayanan kesehatan sekolah.</p>
+<p>Teman sehat merupakan web penyedia fasilitas tambahan untuk UKS sekolah dalam bidang kesehetan</p>
+</div>
+</div>
+<div class="about-content">
+<div class="text-center">
+<img src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/img/about-img.png') }}" class="img-fluid" alt>
+</div>
+<div class="our-mission">
+<div class="row">
+<div class="col-md-4">
+<div class="about-det">
+<h4>VISI</h4>
+<p>Menjadi web yang dapat membantu tenaga kesehatan agar memudahkan sarana prasarana kesehatan.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="about-det">
+<h4>MISI</h4>
+<p>Menyelenggarakan pelayanan kesehatan sesuai perkembangan teknologi dan informasi berbasis digital.</p>
+<p>Mewujudkan pelayanan kesehatan yang bermutu, merata, terjangkau dan berkeadilan. </p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="about-det">
+<h4> Plan Kami</h4>
+<p>Memberikan pelayanan kesehatan promotive, preventif, kuratif dan rehabilitatif</p>
 </div>
 </div>
 </div>
 </div>
+</div>
+</div>
+</section>
 </div>
 
 
@@ -212,9 +201,11 @@
 <h4 class="footer-title">Location</h4>
 <div class="about-clinic">
 <p><strong>Address:</strong>
-<br>Jl. Teluk Pacitan, Arjosari, Kec. Blimbing,
-<br>Malang,65126</p>
-<p class="m-b-0"><strong>Phone</strong>:
+<br>Jl. Teluk Pacitan
+<br>Malang,65126
+</p>
+<p class="m-b-0">
+<strong>Phone</strong>:
 <a href="tel:+8503867896">(850) 386-7896</a>
 <br> <strong>Fax</strong>:
 <a href="tel:+8503867896">(850) 386-7896</a>
@@ -272,7 +263,7 @@
 <div class="row">
 <div class="col-12">
 <div class="copy-text text-center">
-<p>&#xA9; 2023 <a href="#">Teman Sehat</a>. All rights reserved.</p>
+<p>&#xA9; 2023 <a href="#">Teman sehat</a>. All rights reserved.</p>
 </div>
 </div>
 </div>
@@ -284,13 +275,15 @@
 
 <div class="sidebar-overlay" data-reff="#side_menu"></div>
 
-<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/js/jquery-3.5.1.min.js) }}"></script>
 
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/js/popper.min.js') }}"></script>
+<script src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/js/bootstrap.min.js') }}"></script>
 
-<script src="assets/js/theme.js"></script>
+<script src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/js/owl.carousel.min.js') }}"></script>
+
+<script src="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/js/theme.js') }}"></script>
 </body>
 
-<!-- Mirrored from Teman Sehat.dreamguystech.com/lightblue/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2023 06:09:26 GMT -->
+<!-- Mirrored from Teman sehat.dreamguystech.com/lightblue/about-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2023 06:09:08 GMT -->
 </html>
