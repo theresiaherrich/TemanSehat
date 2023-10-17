@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class staff extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'foto',
+        'nama',
+        'divisi',
+        'ttl',
+        'jeniskelamin',
+        'telp'
+    ];
 }

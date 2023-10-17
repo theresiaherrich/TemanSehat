@@ -30,7 +30,6 @@
          <!-- Sidebar  -->
          @include('admin.sidebar')
          <!-- Page Content  -->
-         <div id="content-page" class="content-page">
             <!-- TOP Nav Bar -->
             @include('admin.header')
             <!-- TOP Nav Bar END -->

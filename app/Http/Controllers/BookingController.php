@@ -57,7 +57,7 @@ class BookingController extends Controller
      */
     public function create(): View
     {
-        return view('admin.Booking.index');
+        return view('admin.Booking.create');
     }
 
     /**

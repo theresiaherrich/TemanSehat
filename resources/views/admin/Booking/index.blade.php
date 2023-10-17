@@ -32,7 +32,6 @@
         <!-- Sidebar  -->
         @include('admin.sidebar')
         <!-- Page Content  -->
-        <div id="content-page" class="content-page">
             <!-- TOP Nav Bar -->
             @include('admin.header')
             <!-- TOP Nav Bar END -->
@@ -44,6 +43,9 @@
                                 <div class="iq-header-title">
                                     <h4 class="card-title">Data Appointment</h4>
                                 </div>
+                                <a href="{{ route('booking.create') }}" class="btn btn-sm btn-primary mr-2 mb-2">
+                                    Make Appointment
+                                  </a>
                             </div>
                             <div class="iq-card-body">
                                 <div id="table" class="table-editable">
@@ -74,7 +76,7 @@
                                                     <td contenteditable="true">{{ $row->penyakit }}</td>
                                                     <td contenteditable="true">{{ $row->tanggal }}</td>
                                                     <td contenteditable="true">{{ $row->pukul }}</td>
-                                                    <td >
+                                                    <td contenteditable="true">
                                                         {{ $row->status }}
                                                     </td>
                                                     <td>

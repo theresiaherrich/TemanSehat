@@ -22,4 +22,6 @@ Route::get('/admin', function () {
 });
 
 Route::resource('/booking', \App\Http\Controllers\BookingController::class);
+Route::resource('/datastaff', \App\Http\Controllers\StaffController::class);
+Route::resource('/pasien', \App\Http\Controllers\SiswaController::class);
 

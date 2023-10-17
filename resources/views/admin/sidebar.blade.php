@@ -22,23 +22,23 @@
              </li>
              <li class="iq-menu-title"><i class="ri-subtract-line"></i><span>Pages</span></li>
              <li>
-                <a href="#doctor-info" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-user-3-fill"></i><span>Doctors</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                <a href="#doctor-info" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-user-3-fill"></i><span>Staff</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                 <ul id="doctor-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                   <li><a href="doctor-list.html"><i class="ri-file-list-fill"></i>All Doctors</a></li>
-                   <li><a href="add-doctor.html"><i class="ri-user-add-fill"></i> Add Doctor</a></li>
-                   <li><a href="profile.html"><i class="ri-profile-fill"></i>Doctor Profile</a></li>
-                   <li><a href="profile-edit.html"><i class="ri-file-edit-fill"></i>Edit Doctor</a></li>
+                   <li><a href="/datastaff"><i class="ri-file-list-fill"></i>All Staff</a></li>
+                   <li><a href="add-doctor.html"><i class="ri-user-add-fill"></i> Add Staff</a></li>
+                   <li><a href="profile.html"><i class="ri-profile-fill"></i>Staff Profile</a></li>
+                   <li><a href="profile-edit.html"><i class="ri-file-edit-fill"></i>Edit Staff</a></li>
                 </ul>
              </li>
              <li>
                 <a href="#patient-info" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="fa fa-users"></i><span>Patient</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                 <ul id="patient-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                   <li><a href="patient-list.html"><i class="ri-file-list-fill"></i>All Patient</a></li>
+                   <li><a href="/pasien"><i class="ri-file-list-fill"></i>All Patient</a></li>
                    <li><a href="add-patient.html"><i class="ri-user-add-fill"></i> Add Patient</a></li>
                    <li><a href="patient-edit.html"><i class="ri-file-edit-fill"></i> Edit Patient</a></li>
                 </ul>
              </li>
-             <li><a href="/booking" class="iq-waves-effect"><i class="ri-calendar-event-fill"></i><span>Appointemt</span></a></li>
+             <li><a href="/booking" class="iq-waves-effect"><i class="ri-calendar-event-fill"></i><span>Appointment</span></a></li>
           </ul>
        </nav>
        <div class="p-3"></div>
