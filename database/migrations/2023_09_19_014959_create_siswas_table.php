@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('foto');
             $table->string('nama');
             $table->string('kelas');
-            $table->string('penyaki');
+            $table->string('penyakit');
             $table->string('jeniskelamin');
             $table->string('ruangan')->nullable();
             $table->string('status')->default('sembuh');
