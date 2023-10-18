@@ -72,12 +72,8 @@
                                           </div>
                                           <div class="form-group col-sm-6">
                                              <label>Status:</label>
-                                             <select class="form-control" id="exampleFormControlSelect2" name="status">
-                                                <option value="1" {{ $book->status == 1 ? 'selected' : '' }}>
-                                                    Ringan</option>
-                                                <option value="0" {{ $book->status == 0 ? 'selected' : '' }}>
-                                                    Berat</option>
-                                             </select>
+                                             <br><input type="radio" name="status" id="status" value="ringan" <?php echo ($book['status'] == "ringan")?"checked":""?>> Ringan
+                                             <br><input type="radio" name="status" id="status" value="darurat" <?php echo ($book['status'] == "darurat")?"checked":""?>> Darurat
                                           </div>
                                           <div class="form-group col-sm-12">
                                              <label>Keluhan:</label>

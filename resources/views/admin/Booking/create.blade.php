@@ -71,11 +71,8 @@
                                           </div>
                                           <div class="form-group col-sm-6">
                                              <label>Status:</label>
-                                             <select class="form-control" id="exampleFormControlSelect2" name="status">
-                                                <option selected>Pilih Status</option>
-                                                    <option >Ringan</option>
-                                                    <option >Berat</option>
-                                             </select>
+                                             <br><input type="radio" name="status" value="ringan" required="" /> Ringan
+                                            <br><input type="radio" name="status" value="darurat" required="" /> Darurat
                                           </div>
                                           <div class="form-group col-sm-12">
                                              <label>Keluhan:</label>

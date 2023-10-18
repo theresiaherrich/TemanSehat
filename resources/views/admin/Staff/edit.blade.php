@@ -45,7 +45,7 @@
                             <form>
                               <div class="form-group">
                                  <div class="add-img-user profile-img-edit">
-                                    <img class="profile-pic img-fluid" src="{{ asset('storage/staff/'.$sat->foto) }}" alt="profile-pic">
+                                    <img class="profile-pic img-fluid avatar-100" src="{{ asset('storage/staff/'.$sat->foto) }}" alt="profile-pic">
                                     <div class="p-image">
                                        {{-- <input type="file" name="foto" multiple="multiple"> --}}
                                     </div>

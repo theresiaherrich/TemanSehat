@@ -52,8 +52,8 @@
                                  <div class="d-flex align-items-center justify-content-between">
                                     <div class="rounded-circle iq-card-icon bg-primary"><i class="ri-user-fill"></i></div>
                                     <div class="text-right">
-                                       <h2 class="mb-0"><span class="counter">5600</span></h2>
-                                       <h5 class="">Doctors</h5>
+                                       <h2 class="mb-0"><span class="counter">{{$jumlahstaff}}</span></h2>
+                                       <h5 class="">Staff</h5>
                                     </div>
                                  </div>
                               </div>
@@ -65,8 +65,8 @@
                                  <div class="d-flex align-items-center justify-content-between">
                                     <div class="rounded-circle iq-card-icon bg-warning"><i class="ri-women-fill"></i></div>
                                     <div class="text-right">
-                                       <h2 class="mb-0"><span class="counter">3450</span></h2>
-                                       <h5 class="">Nurses</h5>
+                                       <h2 class="mb-0"><span class="counter">{{$jumlahobat}}</span></h2>
+                                       <h5 class="">Obat</h5>
                                     </div>
                                  </div>
                               </div>
@@ -78,8 +78,8 @@
                                  <div class="d-flex align-items-center justify-content-between">
                                     <div class="rounded-circle iq-card-icon bg-danger"><i class="ri-group-fill"></i></div>
                                     <div class="text-right">
-                                       <h2 class="mb-0"><span class="counter">3500</span></h2>
-                                       <h5 class="">Patients</h5>
+                                       <h2 class="mb-0"><span class="counter">{{$jumlahinventaris}}</span></h2>
+                                       <h5 class="">Inventaris</h5>
                                     </div>
                                  </div>
                               </div>
@@ -91,8 +91,8 @@
                                  <div class="d-flex align-items-center justify-content-between">
                                     <div class="rounded-circle iq-card-icon bg-info"><i class="ri-hospital-line"></i></div>
                                     <div class="text-right">
-                                       <h2 class="mb-0"><span class="counter">4500</span></h2>
-                                       <h5 class="">Pharmacists</h5>
+                                       <h2 class="mb-0"><span class="counter">{{$jumlahruangan}}</span></h2>
+                                       <h5 class="">Ruangan</h5>
                                     </div>
                                  </div>
                               </div>
@@ -118,14 +118,14 @@
                        <div class="iq-card iq-card-block iq-card-stretch iq-card-height-half">
                           <div class="iq-card-body">
                              <h6>APPOINTMENTS</h6>
-                             <h3><b>5075</b></h3>
+                             <h3><b>{{$jumlahappointment}}</b></h3>
                           </div>
                           <div id="wave-chart-7"></div>
                        </div>
                        <div class="iq-card iq-card-block iq-card-stretch iq-card-height-half">
                           <div class="iq-card-body">
                              <h6>NEW PATIENTS</h6>
-                             <h3><b>1200</b></h3>
+                             <h3><b>{{$jumlahpasien}}</b></h3>
                           </div>
                           <div id="wave-chart-8"></div>
                        </div>

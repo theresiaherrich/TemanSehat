@@ -49,7 +49,13 @@ class BookingController extends Controller
         return view('welcome', compact('jumlahbooking','jumlahpasien'));
     }
 
+    public function indexo(): View
+    {
+        //get posts
 
+        //render view with posts
+        return view('appointment');
+    }
     /**
      * create
      *
@@ -75,7 +81,8 @@ class BookingController extends Controller
             'telp'      => 'required',
             'penyakit'       => 'required',
             'tanggal' => 'required',
-            'pukul' => 'required'
+            'pukul' => 'required',
+            'status' => 'required'
         ]);
 
         //create post
@@ -85,11 +92,12 @@ class BookingController extends Controller
             'telp'      => $request->telp,
             'penyakit'      => $request->penyakit,
             'tanggal' => $request->tanggal,
-            'pukul' => $request->pukul
+            'pukul' => $request->pukul,
+            'status' => $request->status
         ]);
 
         //redirect to index
-        return redirect()->route('booking.index')->with(['success' => 'Data Berhasil Disimpan!']);
+        return back()->with(['success' => 'Data Berhasil Disimpan!']);
     }
     /**
      * show
@@ -136,7 +144,8 @@ class BookingController extends Controller
             'telp'      => 'required|min:11|max:12',
             'penyakit'       => 'required',
             'tanggal' => 'required',
-            'pukul' => 'required'
+            'pukul' => 'required',
+
         ]);
 
         //get post by ID
@@ -150,7 +159,8 @@ class BookingController extends Controller
                 'telp'      => $request->telp,
                 'penyakit'      => $request->penyakit,
                 'tanggal' => $request->tanggal,
-                'pukul' => $request->pukul
+                'pukul' => $request->pukul,
+                'status' => $request->status
             ]);
 
 

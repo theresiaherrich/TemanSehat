@@ -25,9 +25,7 @@
                 <a href="#doctor-info" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-user-3-fill"></i><span>Staff</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                 <ul id="doctor-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                    <li><a href="/datastaff"><i class="ri-file-list-fill"></i>All Staff</a></li>
-                   <li><a href="add-doctor.html"><i class="ri-user-add-fill"></i> Add Staff</a></li>
-                   <li><a href="profile.html"><i class="ri-profile-fill"></i>Staff Profile</a></li>
-                   <li><a href="profile-edit.html"><i class="ri-file-edit-fill"></i>Edit Staff</a></li>
+                   <li><a href="{{ route('datastaff.create')}}"><i class="ri-user-add-fill"></i> Add Staff</a></li>
                 </ul>
              </li>
              <li>

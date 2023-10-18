@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookingController;
+use App\Models\Booking;
+use App\Http\Controllers\StaffController;
+use App\Models\Staff;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +22,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', function () {
-    return view('admin.home');
-});
+
 
 Route::resource('/booking', \App\Http\Controllers\BookingController::class);
 Route::resource('/datastaff', \App\Http\Controllers\StaffController::class);
 Route::resource('/pasien', \App\Http\Controllers\SiswaController::class);
+Route::get('/appointment', [BookingController::class, 'indexo'])->name('indexo');
+Route::get('/admin', [StaffController::class, 'jumlah'])->name('jumlah');
 

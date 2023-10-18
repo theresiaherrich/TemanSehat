@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 //import Model "Post
 use App\Models\Staff;
+use App\Models\Booking;
+use App\Models\Ruangan;
+use App\Models\Siswa;
+use App\Models\Obat;
+use App\Models\Inventaris;
+
 
 //return type View
 use Illuminate\View\View;
@@ -43,10 +49,15 @@ class StaffController extends Controller
     {
         //get posts
         $jumlahstaff = Staff::count();
-        $jumlahpasien = Pasien::count();
+        $jumlahpasien = Siswa::count();
+        $jumlahappointment = Booking::count();
+        $jumlahruangan = Ruangan::count();
+        $jumlahobat = Obat::count();
+        $jumlahinventaris = Inventaris::count();
+
 
         //render view with posts
-        return view('admin.home', compact('jumlahstaff','jumlahpasien'));
+        return view('admin.home', compact('jumlahstaff','jumlahpasien','jumlahappointment','jumlahruangan','jumlahobat','jumlahinventaris'));
     }
 
 
