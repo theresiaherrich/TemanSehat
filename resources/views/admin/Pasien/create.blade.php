@@ -6,7 +6,7 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>Add Patient</title>
+      <title>Add Patient | Admin</title>
       <!-- Favicon -->
       <link rel="shortcut icon" href="{{ asset('xrayy/templates.iqonic.design/xray/html/images/favicon.ico') }}" />
       <!-- Bootstrap CSS -->
@@ -35,17 +35,49 @@
             <!-- TOP Nav Bar END -->
             <div class="container-fluid">
                <div class="row">
-                  <div class="col-lg-12">
-                     <div class="iq-edit-list-data">
-                        <div class="tab-content">
-                           <div class="tab-pane fade active show" id="personal-information" role="tabpanel">
-                              <div class="iq-card">
-                                 <div class="iq-card-header d-flex justify-content-between">
+                  <div class="col-lg-3">
+                     <div class="iq-card">
+                        <div class="iq-card-header d-flex justify-content-between">
                                     <div class="iq-header-title">
                                        <h4 class="card-title">Add Patient</h4>
                                     </div>
                                  </div>
                                  <div class="iq-card-body">
+                                    <form>
+                                      <div class="form-group">
+                                         <div class="add-img-user profile-img-edit">
+                                            <img class="profile-pic img-fluid" src="{{ asset('xrayy/templates.iqonic.design/xray/html/images/user/11.png') }}" alt="profile-pic">
+                                            <div class="p-image">
+                                               {{-- <input type="file" name="foto" multiple="multiple"> --}}
+                                            </div>
+                                         </div>
+                                         <div class="img-extension mt-3">
+                                            <div class="d-inline-block align-items-center">
+                                               <span>Only</span>
+                                               <a href="javascript:void();">.jpg</a>
+                                               <a href="javascript:void();">.png</a>
+                                               <a href="javascript:void();">.jpeg</a>
+                                               <span>allowed</span>
+                                               <div class="form-group col-sm-6">
+                                                <label for="foto">Foto</label>
+                                                <input type="file" id="foto" name="foto" placeholder="foto">
+                                             </div>
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </form>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="col-lg-9">
+                            <div class="iq-card">
+                               <div class="iq-card-header d-flex justify-content-between">
+                                  <div class="iq-header-title">
+                                     <h4 class="card-title">Patient Information</h4>
+                                  </div>
+                               </div>
+                               <div class="iq-card-body">
+                                  <div class="new-user-info">
                                     <form action="{{ route('pasien.store') }}" method="post" enctype="multipart/form-data">
                                         @csrf
                                        <div class=" row align-items-center">
@@ -56,36 +88,33 @@
                                           <div class="form-group col-sm-6">
                                              <label for="kelas">Kelas :</label>
                                              <input type="text" class="form-control" id="kelas" name="kelas" placeholder="Masukan Kelas">
-                                          </div>
-                                          <div class="form-group col-sm-6">
-                                             <label for="telp">No Telp :</label>
-                                             <input type="text" class="form-control" id="telp" name="telp" placeholder="Masukan No Telp">
-                                          </div>
-                                          <div class="form-group col-sm-6">
-                                            <label>Jenis Kelamin:</label>
-                                            <select class="form-control" id="exampleFormControlSelect2" name="jeniskelamin">
-                                               <option selected>Jenis Kelamin</option>
-                                                   <option >Laki-Laki</option>
-                                                   <option >Perempuan</option>
-                                            </select>
-                                         </div>                                         
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <label for="telp">No Telp :</label>
+                                                <input type="text" class="form-control" id="telp" name="telp" placeholder="Masukan No Telp">
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <label>Jenis Kelamin:</label>
+                                                <select class="form-control" id="exampleFormControlSelect2" name="jeniskelamin">
+                                                    <option selected>Jenis Kelamin</option>
+                                                    <option >Laki-Laki</option>
+                                                    <option >Perempuan</option>
+                                                </select>
+                                            </div>
                                           <div class="form-group col-sm-6">
                                              <label for="tanggal">Ruangan:</label>
                                              <input type="text"  class="form-control" id="ruangan" name="ruangan" placeholder="Masukan Ruanganmu">
                                           </div>
                                           <div class="form-group col-sm-6">
-                                             <label>Status:</label>
-                                             <select class="form-control" id="exampleFormControlSelect2" name="status">
-                                                <option selected>Pilih Status</option>
-                                                    <option >Ringan</option>
-                                                    <option >Berat</option>
-                                             </select>
-                                          </div>
-                                          <div class="form-group col-sm-12">
-                                             <label>Keluhan:</label>
-                                             <textarea class="form-control" id="penyakit" name="penyakit" rows="5" style="line-height: 22px;"></textarea>
-                                          </div>
-                                       </div>
+                                              <div class="form-group col-sm-6">
+                                                  <label>Status:</label>
+                                                  <br><input type="radio" name="status" value="ringan" required="" /> Ringan
+                                                  <br><input type="radio" name="status" value="darurat" required="" /> Darurat
+                                                </div>
+                                                <div class="form-group col-sm-12">
+                                                   <label>Keluhan:</label>
+                                                   <textarea class="form-control" id="penyakit" name="penyakit" rows="5" style="line-height: 22px;"></textarea>
+                                                </div>
                                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
                                        <button type="reset" class="btn iq-bg-danger">cancel</button>
                                     </form>

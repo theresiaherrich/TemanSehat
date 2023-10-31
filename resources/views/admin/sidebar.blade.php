@@ -32,8 +32,7 @@
                 <a href="#patient-info" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="fa fa-users"></i><span>Patient</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                 <ul id="patient-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                    <li><a href="/pasien"><i class="ri-file-list-fill"></i>All Patient</a></li>
-                   <li><a href="add-patient.html"><i class="ri-user-add-fill"></i> Add Patient</a></li>
-                   <li><a href="patient-edit.html"><i class="ri-file-edit-fill"></i> Edit Patient</a></li>
+                   <li><a href="{{ route('pasien.create')}}"><i class="ri-user-add-fill"></i> Add Patient</a></li>
                 </ul>
              </li>
              <li><a href="/booking" class="iq-waves-effect"><i class="ri-calendar-event-fill"></i><span>Appointment</span></a></li>
