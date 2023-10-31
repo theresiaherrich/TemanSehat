@@ -28,6 +28,7 @@ Route::get('/', function () {
 Route::resource('/booking', \App\Http\Controllers\BookingController::class);
 Route::resource('/datastaff', \App\Http\Controllers\StaffController::class);
 Route::resource('/pasien', \App\Http\Controllers\SiswaController::class);
+
 Route::get('/appointment', [BookingController::class, 'indexo'])->name('indexo');
 Route::get('/admin', [StaffController::class, 'jumlah'])->name('jumlah');
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
