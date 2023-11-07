@@ -39,7 +39,7 @@
                     <div class="col-sm-12">
                         <div class="iq-card">
                             <div class="iq-card-header d-flex justify-content-between">
-                                <div class="iq-header-title">
+                                <div class="iq-header-title"> 
                                     <h4 class="card-title">Data Pasien</h4>
                                 </div>
                                 <a href="{{ route('pasien.create') }}" class="btn btn-sm btn-primary mr-2 mb-2">
@@ -52,12 +52,11 @@
                                         <thead>
                                             <tr>
                                                 <th>Id</th>
-                                                <th>Foto</th>
                                                 <th>Nama</th>
-                                                <th>No Telp</th>
                                                 <th>Kelas</th>
-                                                <th>Keluhan</th>
+                                                <th>No Telp</th>
                                                 <th>Jenis Kelamin</th>
+                                                <th>Keluhan</th>
                                                 <th>Ruangan</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
@@ -70,12 +69,12 @@
                                             @forelse ($pasien as $row)
                                                 <tr>
                                                     <th scope="row">{{ $no++ }}</th>
-                                                    <td contenteditable="true">{{ $row->foto }}</td>
                                                     <td contenteditable="true">{{ $row->nama }}</td>
                                                     <td contenteditable="true">{{ $row->kelas }}</td>
+                                                    <td contenteditable="true">{{ $row->telp }}</td>
+                                                    <td contenteditable="true">{{ $row->jeniskelamin }}</td>
                                                     <td contenteditable="true">{{ $row->penyakit }}</td>
                                                     <td contenteditable="true">{{ $row->ruangan }}</td>
-                                                    <td contenteditable="true">{{ $row->telp }}</td>
                                                     <td >
                                                         {{ $row->status }}
                                                     </td>

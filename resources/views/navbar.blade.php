@@ -26,8 +26,9 @@
     <li class="active nav-item">
     <a class="btn btn-primary appoint-btn nav-link" href="/appointment">Appointment</a>
     </li>
-    <li class="dropdown nav-item">
-    <a class="dropdown-toggle settings-icon nav-link" data-toggle="dropdown"><i class="fas fa-cog"></i></a>
+    <li class="dropdown nav-item-active">
+        <li class="active"><a class="nav-link"  data-toggle="dropdown"><i class="fas fa-cog"></i></a>
+    {{-- <a class="dropdown-toggle settings-icon nav-link" data-toggle="dropdown"><i class="fas fa-cog"></i></a> --}}
     <div class="dropdown-menu dropdown-menu-right">
     <a class="dropdown-item" href="login.html">Login</a>
     <a class="dropdown-item" href="register.html">Register</a>

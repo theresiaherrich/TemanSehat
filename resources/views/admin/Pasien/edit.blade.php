@@ -6,7 +6,7 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>Add Staff | Admin</title>
+      <title>Add Patient | Admin</title>
       <!-- Favicon -->
       <link rel="shortcut icon" href="{{ asset('xrayy/templates.iqonic.design/xray/html/images/favicon.ico') }}" />
       <!-- Bootstrap CSS -->
@@ -33,76 +33,61 @@
             @include('admin.header')
             <!-- TOP Nav Bar END -->
             <div class="container-fluid">
-               <div class="row">
-                  <div class="col-lg-3">
-                     <div class="iq-card">
-                        <div class="iq-card-header d-flex justify-content-between">
-                           <div class="iq-header-title">
-                              <h4 class="card-title">Add Staff</h4>
-                           </div>
-                        </div> 
-                        <div class="iq-card-body">
-                            <form>
-                              <div class="form-group">
-                                 <div class="add-img-user profile-img-edit">
-                                    <img class="profile-pic img-fluid avatar-100" src="{{ asset('storage/staff/'.$sat->foto) }}" alt="profile-pic">
-                                    <div class="p-image">
-                                       {{-- <input type="file" name="foto" multiple="multiple"> --}}
-                                    </div>
-                                 </div>
-                                 <div class="img-extension mt-3">
-                                    <div class="d-inline-block align-items-center">
-                                       <span>Only</span>
-                                       <a href="javascript:void();">.jpg</a>
-                                       <a href="javascript:void();">.png</a>
-                                       <a href="javascript:void();">.jpeg</a>
-                                       <span>allowed</span>
-                                    </div>
-                                 </div>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-9">
-                     <div class="iq-card">
-                        <div class="iq-card-header d-flex justify-content-between">
-                           <div class="iq-header-title">
-                              <h4 class="card-title">Staff Information</h4>
-                           </div>
-                        </div>
-                        <div class="iq-card-body">
+                <div class="container-fluid">
+                    <div class="row">
+                       <div class="col-lg-12">
+                          <div class="iq-edit-list-data">
+                             <div class="tab-content">
+                                <div class="tab-pane fade active show" id="personal-information" role="tabpanel">
+                                   <div class="iq-card">
+                                      <div class="iq-card-header d-flex justify-content-between">
+                                         <div class="iq-header-title">
+                                            <h4 class="card-title">Add Patient</h4>
+                                         </div>
+                                      </div>
+                                      <div class="iq-card-body">
                            <div class="new-user-info">
-                            <form action="{{ route('datastaff.update', $sat ->id) }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('pasien.update', $pasien ->id) }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
                                  <div class="row">
-                                    <div class="form-group col-md-6">
-                                       <label for="nama">Name:</label>
-                                       <input type="text" class="form-control" id="nama" name="nama" placeholder="Name" value="{{ old('nama', $sat->nama) }}">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                       <label for="divisi">Divisi:</label>
-                                       <input type="text" class="form-control" id="divisi" name="divisi" placeholder="Divisi" value="{{ old('divisi', $sat->divisi) }}">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                       <label for="ttl">TTL:</label>
-                                       <input type="date" class="form-control" id="ttl" name="ttl" placeholder="TTL" value="{{ old('ttl', $sat->ttl) }}">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                       <label for="telp">Telp
-                                       <input type="number" class="form-control" id="telp" name="telp" placeholder="Telp" value="{{ old('telp', $sat->telp) }}">
-                                    </div>
                                     <div class="form-group col-sm-6">
-                                        <label for="foto">Foto</label>
-                                        <input type="file" id="foto" name="foto" placeholder="foto">
+                                        <label for="nama">Nama :</label>
+                                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukan Nama">
                                      </div>
-                                    <div class="form-group col-sm-12">
+                                     <div class="form-group col-sm-6">
+                                        <label for="kelas">Kelas :</label>
+                                        <input type="text" class="form-control" id="kelas" name="kelas" placeholder="Masukan Kelas">
+                                     </div>
+                                     <div class="form-group col-sm-6">
+                                        <label for="telp">No Telp :</label>
+                                        <input type="text" class="form-control" id="telp" name="telp" placeholder="Masukan No Telp">
+                                     </div>
+                                     <div class="form-group col-sm-6">
                                        <label>Jenis Kelamin:</label>
-                                       <br><input type="radio" name="jeniskelamin" id="jeniskelamin" value="cowo" <?php echo ($sat['jeniskelamin'] == "cowo")?"checked":""?>> LAKI-LAKI
-                                       <br><input type="radio" name="jeniskelamin" id="jeniskelamin" value="cewe" <?php echo ($sat['jeniskelamin'] == "cewe")?"checked":""?>> PEREMPUAN
-                                    </div>
-                                 <button type="submit" class="btn btn-primary">Add New Staff</button>
+                                       <select class="form-control" id="exampleFormControlSelect2" name="jeniskelamin">
+                                          <option selected>Jenis Kelamin</option>
+                                              <option >Laki-Laki</option>
+                                              <option >Perempuan</option>
+                                       </select>
+                                    </div>                                         
+                                     <div class="form-group col-sm-6">
+                                        <label for="tanggal">Ruangan:</label>
+                                        <input type="text"  class="form-control" id="ruangan" name="ruangan" placeholder="Masukan Ruanganmu">
+                                     </div>
+                                     <div class="form-group col-sm-6">
+                                        <label>Status:</label>
+                                        <select class="form-control" id="exampleFormControlSelect2" name="status">
+                                           <option selected>Pilih Status</option>
+                                               <option >Ringan</option>
+                                               <option >Berat</option>
+                                        </select>
+                                     </div>
+                                     <div class="form-group col-sm-12">
+                                        <label>Keluhan:</label>
+                                        <textarea class="form-control" id="penyakit" name="penyakit" rows="5" style="line-height: 22px;"></textarea>
+                                     </div>
+                                 <button type="submit" class="btn btn-primary">Add New Patient</button>
                               </form>
                            </div>
                         </div>

@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 //import Model "Post
 use App\Models\Siswa;
-
+use App\Models\Staff;
+use App\Models\Booking;
+use App\Models\Ruangan;
+use App\Models\Obat;
+use App\Models\Inventaris;
 //return type View
 use Illuminate\View\View;
 
@@ -29,6 +33,11 @@ class SiswaController extends Controller
     public function jumlah(): View
     {
         $jumlahpasien = Siswa::count();
+        $jumlahstaff = Staff::count();
+        $jumlahappointment = Booking::count();
+        $jumlahruangan = Ruangan::count();
+        $jumlahobat = Obat::count();
+        $jumlahinventaris = Inventaris::count();
 
         return view('admin.home', compact('jumlahbooking', 'jumlahpasien'));
     }
@@ -41,7 +50,6 @@ class SiswaController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $this->validate($request, [
-            'foto'          =>'required',
             'nama'          =>'required',
             'kelas'         =>'required',
             'penyakit'      =>'required',
@@ -51,12 +59,11 @@ class SiswaController extends Controller
             'telp'          =>'required'
         ]);
 
-        $foto = $request->file('foto');
-        $foto->storeAs('public/pasien', $foto->hashName());
+        // $foto = $request->file('foto');
+        // $foto->storeAs('public/pasien', $foto->hashName());
 
-        $pasien::create([
-            'foto'          => $foto->hashName(),
-            'nama'          => $request->nama,
+        Siswa::create([
+            'nama'          =>$request->nama,
             'kelas'         =>$request->kelas,
             'penyakit'      =>$request->penyakit,
             'jeniskelamin'  =>$request->jeniskelamin,
@@ -75,7 +82,6 @@ class SiswaController extends Controller
     public function update(Request $request, $id): RedirectResponse
     {
         $this->validate($request, [
-            'foto'          =>'required',
             'nama'          =>'required',
             'kelas'         =>'required',
             'penyakit'      =>'required',
@@ -92,14 +98,13 @@ class SiswaController extends Controller
 
             //upload new image
             $foto = $request->file('foto');
-            $foto->storeAs('public/pasien', $foto->hashName());
+            // $foto->storeAs('public/pasien', $foto->hashName());
 
             //delete old image
             Storage::delete('public/pasien/'.$pasien->foto);
 
         $pasien::update([
-            'foto'          => $foto->hashName(),
-            'nama'          => $request->nama,
+            'nama'          =>$request->nama,
             'kelas'         =>$request->kelas,
             'penyakit'      =>$request->penyakit,
             'jeniskelamin'  =>$request->jeniskelamin,
@@ -110,7 +115,7 @@ class SiswaController extends Controller
 
     } else {
         $pasien->update([
-            'nama'          => $request->nama,
+            'nama'          =>$request->nama,
             'kelas'         =>$request->kelas,
             'penyakit'      =>$request->penyakit,
             'jeniskelamin'  =>$request->jeniskelamin,

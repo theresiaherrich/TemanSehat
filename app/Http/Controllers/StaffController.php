@@ -82,7 +82,7 @@ class StaffController extends Controller
     {
         //validate form
         $this->validate($request, [
-            'foto'     => 'required|mimes:jpeg,jpg,png|max:2048',
+            'foto'     => 'required',
             'nama'     => 'required',
             'divisi'   => 'required',
             'ttl'      => 'required',
@@ -147,7 +147,7 @@ class StaffController extends Controller
     {
         //validate form
         $this->validate($request, [
-            'foto'     => 'required|mimes:jpeg,jpg,png|max:2048',
+            'foto'     => 'required',
             'nama'     => 'required',
             'divisi'   => 'required',
             'ttl'      => 'required',
