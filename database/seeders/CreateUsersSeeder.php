@@ -14,13 +14,13 @@ class CreateUsersSeeder extends Seeder
     {
         $users = [
             [
-               'name'=>'Admin User',
+               'name'=>'Admin',
                'email'=>'admin@gmail.com',
                'type'=>1,
                'password'=> bcrypt('123456'),
             ],
             [
-               'name'=>'Manager User',
+               'name'=>'Manager',
                'email'=>'manager@gmail.com',
                'type'=> 2,
                'password'=> bcrypt('123456'),
@@ -32,10 +32,10 @@ class CreateUsersSeeder extends Seeder
                'password'=> bcrypt('123456'),
             ],
         ];
-    
+
         foreach ($users as $key => $user) {
             User::create($user);
         }
     }
-    
+
 }

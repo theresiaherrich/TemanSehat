@@ -11,7 +11,7 @@
 
 <link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/bootstrap.min.css') }}">
 
-<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/fontawesome/css/fontawesome.min.css') }]">
+<link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/fontawesome/css/fontawesome.min.css') }}">
 <link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/fontawesome/css/all.min.css') }}">
 
 <link rel="stylesheet" href="{{asset('medilabf/medifab.dreamguystech.com/lightblue/assets/css/style.css') }}">
