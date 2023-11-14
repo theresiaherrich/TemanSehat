@@ -15,13 +15,13 @@
     <a href="/index" class="nav-link">Home</a>
     </li>
     <li class="nav-item">
-    <a href="about-us.html" class="nav-link">Tentang Kami</a>
+    <a href="/about" class="nav-link">Tentang Kami</a>
     </li>
     <li class="nav-item">
-    <a href="doctors.html" class="nav-link">Konsultan</a>
+    <a href="/staff" class="nav-link">Staff</a>
     </li>
     <li class="nav-item">
-    <a href="contact-us.html" class="nav-link">Kontak Kami</a>
+    <a href="/contact" class="nav-link">Kontak Kami</a>
     </li>
     <li class="active nav-item">
     <a class="btn btn-primary appoint-btn nav-link" href="/appointment">Appointment</a>

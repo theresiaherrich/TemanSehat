@@ -40,6 +40,14 @@ class StaffController extends Controller
         return view('admin.Staff.index', compact('sat','jumlahstaff'));
     }
 
+    public function indexo(): View
+    {
+        //get posts
+
+        //render view with posts
+        return view('doctors');
+    }
+
     /**
      * index
      *
