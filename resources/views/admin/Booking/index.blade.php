@@ -60,6 +60,7 @@
                                                 <th>Tanggal</th>
                                                 <th>Waktu</th>
                                                 <th>Status</th>
+                                                <th>Approvel</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -76,9 +77,21 @@
                                                     <td contenteditable="true">{{ $row->penyakit }}</td>
                                                     <td contenteditable="true">{{ $row->tanggal }}</td>
                                                     <td contenteditable="true">{{ $row->pukul }}</td>
-                                                    <td contenteditable="true">
-                                                        {{ $row->status }}
-                                                    </td>
+                                                    <td contenteditable="true">{{ $row->status }}</td>
+                                                    {{-- <td contenteditable="true">{{ $row->approvel }}</td>                                                     --}}
+                                                    <td>
+                                                        <a href="{{ route('booking.edit', $row->id) }}" class="btn btn-sm btn-primary mr-2 mb-2">
+                                                          Edit
+                                                        </a>
+                                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');"  action="{{ route('booking.destroy', $row->id) }}" method="post" style="display:inline;">
+                                                          @csrf
+                                                          {{ method_field('delete') }}
+                                                          <button type="submit" class="btn btn-sm btn-danger mb-2">
+                                                            Hapus
+                                                          </button>
+                                                        </form>
+
+                                                      </td>
                                                     <td>
                                                         <a href="{{ route('booking.edit', $row->id) }}" class="btn btn-sm btn-primary mr-2 mb-2">
                                                           Edit

@@ -14,7 +14,8 @@ class Booking extends Model
         'penyakit',
         'tanggal',
         'pukul',
-        'status'
+        'status',
+        'approvel'
     ];
 
 }
