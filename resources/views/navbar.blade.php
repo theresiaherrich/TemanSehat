@@ -12,7 +12,7 @@
     <div class="navbar-collapse collapse" id="navbar">
     <ul class="nav navbar-nav main-nav float-right ml-auto">
     <li class="nav-item">
-    <a href="index.html" class="nav-link">Home</a>
+    <a href="/index" class="nav-link">Home</a>
     </li>
     <li class="nav-item">
     <a href="about-us.html" class="nav-link">Tentang Kami</a>
@@ -27,12 +27,19 @@
     <a class="btn btn-primary appoint-btn nav-link" href="/appointment">Appointment</a>
     </li>
     <li class="dropdown nav-item-active">
-        <li class="active"><a class="nav-link"  data-toggle="dropdown"><i class="fas fa-cog"></i></a>
+        <a class="nav-link" data-toggle="dropdown" href="#"><i class="fas fa-cog"></i></a>
     {{-- <a class="dropdown-toggle settings-icon nav-link" data-toggle="dropdown"><i class="fas fa-cog"></i></a> --}}
     <div class="dropdown-menu dropdown-menu-right">
-    <a class="dropdown-item" href="login.html">Login</a>
-    <a class="dropdown-item" href="register.html">Register</a>
+    <a class="dropdown-item" href="/login">Login</a>
+    <a class="dropdown-item" href="/register">Register</a>
     </div>
+    {{-- <li class="dropdown nav-item-active">
+        <a class="nav-link" data-toggle="dropdown" href="#"><i class="fas fa-cog"></i></a>
+        <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="login.html">Login</a>
+            <a class="dropdown-item" href="register.html">Register</a>
+        </div>
+    </li> --}}
     </li>
     </ul>
     </div>
