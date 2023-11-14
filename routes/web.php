@@ -30,6 +30,11 @@ Route::resource('/datastaff', \App\Http\Controllers\StaffController::class);
 Route::resource('/pasien', \App\Http\Controllers\SiswaController::class);
 
 Route::get('/appointment', [BookingController::class, 'indexo'])->name('indexo');
+Route::get('/about', [AboutController::class, 'indexo'])->name('indexo');
+Route::get('/contact', [ContactController::class, 'indexo'])->name('indexo');
+Route::get('/doctordetail', [DoctordetailController::class, 'indexo'])->name('indexo');
+Route::get('/doctors', [DoctorsController::class, 'indexo'])->name('indexo');
+
 Route::get('/admin', [StaffController::class, 'jumlah'])->name('jumlah');
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
