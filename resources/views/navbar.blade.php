@@ -26,7 +26,7 @@
     <li class="active nav-item">
     <a class="btn btn-primary appoint-btn nav-link" href="/appointment">Appointment</a>
     </li>
-    <li class="dropdown nav-item-active">
+    <li class="dropdown nav-item">
         <a class="nav-link" data-toggle="dropdown" href="#"><i class="fas fa-cog"></i></a>
     {{-- <a class="dropdown-toggle settings-icon nav-link" data-toggle="dropdown"><i class="fas fa-cog"></i></a> --}}
     <div class="dropdown-menu dropdown-menu-right">

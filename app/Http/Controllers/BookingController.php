@@ -82,7 +82,8 @@ class BookingController extends Controller
             'penyakit'       => 'required',
             'tanggal' => 'required',
             'pukul' => 'required',
-            'status' => 'required'
+            'status' => 'required',
+            'approvel' => 'required'
         ]);
 
         //create post
@@ -93,7 +94,8 @@ class BookingController extends Controller
             'penyakit'      => $request->penyakit,
             'tanggal' => $request->tanggal,
             'pukul' => $request->pukul,
-            'status' => $request->status
+            'status' => $request->status,
+            'approvel' => $request->approvel
         ]);
 
         //redirect to index
@@ -160,7 +162,8 @@ class BookingController extends Controller
                 'penyakit'      => $request->penyakit,
                 'tanggal' => $request->tanggal,
                 'pukul' => $request->pukul,
-                'status' => $request->status
+                'status' => $request->status,
+                'approvel' => $request->approvel
             ]);
 
 
