@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 //import Model "Post
 use App\Models\Booking;
+use Illuminate\Support\Facades\DB;
 
 //return type View
 use Illuminate\View\View;
@@ -26,8 +27,13 @@ class BookingController extends Controller
     public function index(): View
     {
         //get posts
-        $book = Booking::latest()->paginate(5);
+        $book =  DB::table('bookings')
+        ->orderByDesc(DB::raw('CASE WHEN status = "darurat" THEN 1 ELSE 0 END'))
+        ->orderBy('status')
+        ->get();
+
         $jumlahbooking = Booking::count();
+
 
 
         //render view with posts
@@ -171,7 +177,7 @@ class BookingController extends Controller
         return redirect()->route('booking.index')->with(['success' => 'Data Berhasil Diubah!']);
     }
 
-/** 
+/**
      * destroy
      *
      * @param  mixed $post

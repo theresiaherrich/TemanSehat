@@ -33,8 +33,8 @@ Route::resource('/datastaff', \App\Http\Controllers\StaffController::class);
 Route::resource('/pasien', \App\Http\Controllers\SiswaController::class);
 
 Route::get('/appointment', [BookingController::class, 'indexo'])->name('indexo');
-Route::get('/about', [AboutController::class, 'indexo'])->name('indexo');
-Route::get('/contact', [ContactController::class, 'indexo'])->name('indexo');
+Route::get('/about', [AboutController::class, 'index'])->name('index');
+Route::get('/contact', [ContactController::class, 'index'])->name('index');
 Route::get('/staff', [StaffController::class, 'indexo'])->name('indexo');
 
 Route::get('/admin', [StaffController::class, 'jumlah'])->name('jumlah');
@@ -49,10 +49,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 });
 
 Route::middleware(['auth', 'user-access:manager'])->group(function () {
-  
+
     Route::get('/manager/home', [HomeController::class, 'managerHome'])->name('manager.home');
 });
- 
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
