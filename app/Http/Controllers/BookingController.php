@@ -19,6 +19,16 @@ use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
+    public function approve(Request $request, Appointment $appointment)
+    {
+        $appointment->update(['status' => 'accepted']);
+        return redirect()->back()->with('success', 'Appointment accepted successfully.');
+    }
+    public function reject(Requst $request, Appointment $appointment)
+    {
+        $appointment->update(['status' => 'rejected']);
+        return redirect()->back()->with('error', 'Appointment rejected.');
+    }
     /**
      * index
      *
@@ -89,7 +99,7 @@ class BookingController extends Controller
             'tanggal' => 'required',
             'pukul' => 'required',
             'status' => 'required',
-            'approvel' => 'required'
+            'approval' => 'required'
         ]);
 
         //create post
@@ -101,7 +111,7 @@ class BookingController extends Controller
             'tanggal' => $request->tanggal,
             'pukul' => $request->pukul,
             'status' => $request->status,
-            'approvel' => $request->approvel
+            'approval' => $request->approval
         ]);
 
         //redirect to index
@@ -169,7 +179,7 @@ class BookingController extends Controller
                 'tanggal' => $request->tanggal,
                 'pukul' => $request->pukul,
                 'status' => $request->status,
-                'approvel' => $request->approvel
+                'approval' => $request->approval
             ]);
 
 

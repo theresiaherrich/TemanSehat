@@ -60,10 +60,10 @@
                                                 <th>Tanggal</th>
                                                 <th>Waktu</th>
                                                 <th>Status</th>
-                                                <th>Approvel</th>
-                                                <th>Action</th>
+                                                <th>Approval</th>
                                             </tr>
                                         </thead>
+                                        
                                         <tbody>
                                             @php
                                                 $no = 1;
@@ -80,6 +80,19 @@
                                                     <td contenteditable="true">{{ $row->status }}</td>
                                                     {{-- <td contenteditable="true">{{ $row->approvel }}</td>                                                     --}}
                                                     <td>
+                                                        <a href="{{ route('pasien.index', $row->id) }}" class="btn btn-sm btn-primary mr-2 mb-2">
+                                                            Accept
+                                                          </a>
+                                                          <form onsubmit="return confirm('Apakah Anda Yakin ?');"  action="{{ route('booking.destroy', $row->id) }}" method="post" style="display:inline;">
+                                                            @csrf
+                                                            {{ method_field('delete') }}
+                                                            <button type="submit" class="btn btn-sm btn-danger mb-2">
+                                                              Reject
+                                                            </button>
+                                                          </form>
+
+                                                      </td>
+                                                    {{-- <td>
                                                         <a href="{{ route('booking.edit', $row->id) }}" class="btn btn-sm btn-primary mr-2 mb-2">
                                                           Edit
                                                         </a>
@@ -91,20 +104,7 @@
                                                           </button>
                                                         </form>
 
-                                                      </td>
-                                                    <td>
-                                                        <a href="{{ route('booking.edit', $row->id) }}" class="btn btn-sm btn-primary mr-2 mb-2">
-                                                          Edit
-                                                        </a>
-                                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');"  action="{{ route('booking.destroy', $row->id) }}" method="post" style="display:inline;">
-                                                          @csrf
-                                                          {{ method_field('delete') }}
-                                                          <button type="submit" class="btn btn-sm btn-danger mb-2">
-                                                            Hapus
-                                                          </button>
-                                                        </form>
-
-                                                      </td>
+                                                      </td> --}}
                                                 </tr>
                                                 @endforeach
                                         </tbody>

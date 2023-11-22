@@ -69,16 +69,12 @@
                                                   <option >Perempuan</option>
                                                 </select>
                                              </div>
-                                             <div class="form-group col-sm-6">
-                                                <label for="tanggal">Ruangan:</label>
-                                                <input type="text"  class="form-control" id="ruangan" name="ruangan" placeholder="Masukan Ruanganmu">
-                                             </div>
                                             <div class="form-group col-sm-6">
                                              <label>Status:</label>
                                              <select class="form-control" id="exampleFormControlSelect2" name="status">
                                                 <option selected>Pilih Status</option>
                                                     <option >Ringan</option>
-                                                    <option >Berat</option>
+                                                    <option >Darurat</option>
                                              </select>
                                           </div>
                                                 <div class="form-group col-sm-12">

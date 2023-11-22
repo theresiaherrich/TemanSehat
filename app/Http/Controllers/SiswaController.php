@@ -35,7 +35,6 @@ class SiswaController extends Controller
         $jumlahpasien = Siswa::count();
         $jumlahstaff = Staff::count();
         $jumlahappointment = Booking::count();
-        $jumlahruangan = Ruangan::count();
         $jumlahobat = Obat::count();
         $jumlahinventaris = Inventaris::count();
 
@@ -54,7 +53,6 @@ class SiswaController extends Controller
             'kelas'         =>'required',
             'penyakit'      =>'required',
             'jeniskelamin'  =>'required',
-            'ruangan'       =>'required',
             'status'        =>'required',
             'telp'          =>'required'
         ]);
@@ -67,7 +65,6 @@ class SiswaController extends Controller
             'kelas'         =>$request->kelas,
             'penyakit'      =>$request->penyakit,
             'jeniskelamin'  =>$request->jeniskelamin,
-            'ruangan'       =>$request->ruangan,
             'status'        =>$request->status,
             'telp'          =>$request->telp
         ]);
@@ -86,7 +83,6 @@ class SiswaController extends Controller
             'kelas'         =>'required',
             'penyakit'      =>'required',
             'jeniskelamin'  =>'required',
-            'ruangan'       =>'required',
             'status'        =>'required',
             'telp'          =>'required'
         ]);
@@ -108,7 +104,6 @@ class SiswaController extends Controller
             'kelas'         =>$request->kelas,
             'penyakit'      =>$request->penyakit,
             'jeniskelamin'  =>$request->jeniskelamin,
-            'ruangan'       =>$request->ruangan,
             'status'        =>$request->status,
             'telp'          =>$request->telp
         ]);
@@ -119,7 +114,6 @@ class SiswaController extends Controller
             'kelas'         =>$request->kelas,
             'penyakit'      =>$request->penyakit,
             'jeniskelamin'  =>$request->jeniskelamin,
-            'ruangan'       =>$request->ruangan,
             'status'        =>$request->status,
             'telp'          =>$request->telp
         ]);

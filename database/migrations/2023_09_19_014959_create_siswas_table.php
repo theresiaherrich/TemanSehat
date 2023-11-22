@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('kelas');
             $table->string('penyakit');
             $table->string('jeniskelamin');
-            $table->string('ruangan')->nullable();
             $table->string('status')->default('sembuh');
             $table->string('telp');
             $table->timestamps();

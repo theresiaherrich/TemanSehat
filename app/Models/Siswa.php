@@ -12,7 +12,6 @@ class Siswa extends Model
         'kelas',
         'penyakit',
         'jeniskelamin',
-        'ruangan',
         'status',
         'telp'
     ];

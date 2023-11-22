@@ -15,7 +15,11 @@ class Booking extends Model
         'tanggal',
         'pukul',
         'status',
-        'approvel'
+        'approval'
     ];
 
+public function siswa()
+{
+    return $this->belongsTo(User::class);
+}
 }

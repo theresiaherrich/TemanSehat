@@ -42,7 +42,7 @@
                                    <div class="iq-card">
                                       <div class="iq-card-header d-flex justify-content-between">
                                          <div class="iq-header-title">
-                                            <h4 class="card-title">Add Patient</h4>
+                                            <h4 class="card-title">Edit Patient</h4>
                                          </div>
                                       </div>
                                       <div class="iq-card-body">
@@ -53,19 +53,19 @@
                                  <div class="row">
                                     <div class="form-group col-sm-6">
                                         <label for="nama">Nama :</label>
-                                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukan Nama">
+                                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukan Nama" value="{{ old('nama', $pasien->nama) }}>
                                      </div>
                                      <div class="form-group col-sm-6">
                                         <label for="kelas">Kelas :</label>
-                                        <input type="text" class="form-control" id="kelas" name="kelas" placeholder="Masukan Kelas">
+                                        <input type="text" class="form-control" id="kelas" name="kelas" placeholder="Masukan Kelas" value="{{ old('kelas', $pasien->kelas) }}>
                                      </div>
                                      <div class="form-group col-sm-6">
                                         <label for="telp">No Telp :</label>
-                                        <input type="text" class="form-control" id="telp" name="telp" placeholder="Masukan No Telp">
+                                        <input type="text" class="form-control" id="telp" name="telp" placeholder="Masukan No Telp" value="{{ old('telp', $pasien->telp) }}>
                                      </div>
                                      <div class="form-group col-sm-6">
                                        <label>Jenis Kelamin:</label>
-                                       <select class="form-control" id="exampleFormControlSelect2" name="jeniskelamin">
+                                       <select class="form-control" id="exampleFormControlSelect2" name="jeniskelamin" value="{{ old('jeniskelamin', $pasien->jeniskelamin) }}>
                                           <option selected>Jenis Kelamin</option>
                                               <option >Laki-Laki</option>
                                               <option >Perempuan</option>
@@ -73,19 +73,19 @@
                                     </div>                                         
                                      <div class="form-group col-sm-6">
                                         <label for="tanggal">Ruangan:</label>
-                                        <input type="text"  class="form-control" id="ruangan" name="ruangan" placeholder="Masukan Ruanganmu">
+                                        <input type="text"  class="form-control" id="ruangan" name="ruangan" placeholder="Masukan Ruanganmu" value="{{ old('ruangan', $pasien->ruangan) }}>
                                      </div>
                                      <div class="form-group col-sm-6">
                                         <label>Status:</label>
-                                        <select class="form-control" id="exampleFormControlSelect2" name="status">
+                                        <select class="form-control" id="exampleFormControlSelect2" name="status" value="{{ old('status', $pasien->status) }}>
                                            <option selected>Pilih Status</option>
-                                               <option >Ringan</option>
-                                               <option >Berat</option>
+                                               <option>Ringan</option>
+                                               <option>Darurat</option>
                                         </select>
                                      </div>
                                      <div class="form-group col-sm-12">
                                         <label>Keluhan:</label>
-                                        <textarea class="form-control" id="penyakit" name="penyakit" rows="5" style="line-height: 22px;"></textarea>
+                                        <textarea class="form-control" id="penyakit" name="penyakit" rows="5" style="line-height: 22px;" value="{{ old('penyakit', $pasien->penyakit) }}></textarea>
                                      </div>
                                  <button type="submit" class="btn btn-primary">Add New Patient</button>
                               </form>

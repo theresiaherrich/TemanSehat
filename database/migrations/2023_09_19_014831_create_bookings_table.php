@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('tanggal');
             $table->string('pukul');
             $table->string('status');
-            $table->string('approvel');
+            $table->string('approval');
             $table->timestamps();
         });
     }

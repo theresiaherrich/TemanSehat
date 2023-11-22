@@ -39,7 +39,7 @@ Route::get('/staff', [StaffController::class, 'indexo'])->name('indexo');
 
 Route::get('/admin', [StaffController::class, 'jumlah'])->name('jumlah');
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
-    Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
+Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
 });
 
 
@@ -56,3 +56,6 @@ Route::middleware(['auth', 'user-access:manager'])->group(function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/bookings/{appointment}/approve', [BookingController::class, 'approve'])->name('bookings.approve');
+Route::post('/bookings/{appointment}/reject', [BookingController::class, 'reject'])->name('bookings.aprejectprove');

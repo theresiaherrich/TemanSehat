@@ -57,7 +57,6 @@
                                                 <th>No Telp</th>
                                                 <th>Jenis Kelamin</th>
                                                 <th>Keluhan</th>
-                                                <th>Ruangan</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -74,19 +73,18 @@
                                                     <td contenteditable="true">{{ $row->telp }}</td>
                                                     <td contenteditable="true">{{ $row->jeniskelamin }}</td>
                                                     <td contenteditable="true">{{ $row->penyakit }}</td>
-                                                    <td contenteditable="true">{{ $row->ruangan }}</td>
                                                     <td >
                                                         {{ $row->status }}
                                                     </td>
                                                     <td>
-                                                        <a href="{{ route('pasien.edit', $row->id) }}" class="btn btn-sm btn-primary mr-2 mb-2">
+                                                        {{-- <a href="{{ route('pasien.edit', $row->id) }}" class="btn btn-sm btn-primary mr-2 mb-2">
                                                           Edit
-                                                        </a>
+                                                        </a> --}}
                                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');"  action="{{ route('pasien.destroy', $row->id) }}" method="post" style="display:inline;">
                                                           @csrf
                                                           {{ method_field('delete') }}
                                                           <button type="submit" class="btn btn-sm btn-danger mb-2">
-                                                            Hapus
+                                                            Done
                                                           </button>
                                                         </form>
 
